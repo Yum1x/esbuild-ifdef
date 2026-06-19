@@ -607,6 +607,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@yum1x/esbuild-ifdef@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@yum1x/esbuild-ifdef@workspace:."
+  dependencies:
+    "@types/node": "npm:^24.0.0"
+    esbuild: "npm:^0.28.1"
+    oxfmt: "npm:^0.55.0"
+    tsdown: "npm:^0.22.2"
+    typescript: "npm:^6.0.3"
+  peerDependencies:
+    esbuild: ">=0.15.0"
+  dependenciesMeta:
+    esbuild:
+      built: true
+  languageName: unknown
+  linkType: soft
+
 "ansis@npm:^4.3.1":
   version: 4.3.1
   resolution: "ansis@npm:4.3.1"
@@ -664,23 +681,6 @@ __metadata:
   checksum: 10c0/577f2868bfcad4ffbf911b57c75016125eb8cc8a7d32cf2d3e9fbcb31bfe6e9e6b66d9457ac34ccb2cd38bff353b3af34287899e0360b8c561ff6d4a048aca62
   languageName: node
   linkType: hard
-
-"esbuild-ifdef@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "esbuild-ifdef@workspace:."
-  dependencies:
-    "@types/node": "npm:^24.0.0"
-    esbuild: "npm:^0.28.1"
-    oxfmt: "npm:^0.55.0"
-    tsdown: "npm:^0.22.2"
-    typescript: "npm:^6.0.3"
-  peerDependencies:
-    esbuild: ">=0.15.0"
-  dependenciesMeta:
-    esbuild:
-      built: true
-  languageName: unknown
-  linkType: soft
 
 "esbuild@npm:^0.28.1":
   version: 0.28.1

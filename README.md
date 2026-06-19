@@ -2,14 +2,16 @@
 
 This esbuild plugin allows you to include/exclude code from your bundle conditionally on compile time using `/// #if` comments.
 
+> A modernized, type-safe fork of [zziger/esbuild-ifdef](https://github.com/zziger/esbuild-ifdef), updated for current esbuild and TypeScript.
+
 ## Installation
 
 ```bash
 # npm
-npm install esbuild-ifdef
+npm install @yum1x/esbuild-ifdef
 
-#yarn
-yarn add esbuild-ifdef
+# yarn
+yarn add @yum1x/esbuild-ifdef
 ```
 
 ## Usage
@@ -71,4 +73,4 @@ esbuild.build({
 
 ## License
 
-MIT
+MIT © [Dzhemesiuk Artem](https://github.com/zziger) (original) and [yuM1x](https://github.com/yuM1x) (fork)
