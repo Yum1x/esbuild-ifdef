@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/oxfmt/configuration_schema.json",
+  "singleQuote": false,
+  "trailingComma": "all",
+  "printWidth": 120,
+  "semi": true,
+  "vueIndentScriptAndStyle": false,
+  "quoteProps": "preserve",
+  "bracketSpacing": true,
+  "objectWrap": "preserve",
+  "arrowParens": "avoid",
+  "experimentalSortImports": {
+    "order": "asc",
+    "groups": [["type-import", "value-import"]]
+  }
+}

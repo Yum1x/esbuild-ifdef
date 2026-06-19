@@ -1,34 +1,70 @@
 {
   "name": "esbuild-ifdef",
-  "version": "0.2.0",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "",
-  "scripts": {
-    "build": "tsup index.ts --dts --format cjs,esm --minify"
-  },
-  "exports": {
-    ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
-    }
-  },
-  "files": [
-    "dist",
-    "README.md"
+  "version": "0.3.0",
+  "description": "esbuild plugin for compile-time conditional compilation using /// #if directives",
+  "keywords": [
+    "compile-time",
+    "conditional-compilation",
+    "dead-code-elimination",
+    "esbuild",
+    "esbuild-plugin",
+    "ifdef",
+    "preprocessor"
   ],
+  "homepage": "https://github.com/zziger/esbuild-ifdef#readme",
+  "bugs": {
+    "url": "https://github.com/zziger/esbuild-ifdef/issues"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/zziger/esbuild-ifdef.git"
   },
-  "peerDependencies": {
-    "esbuild": "^0.15.2"
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.cts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "typecheck": "tsc --noEmit",
+    "typecheck:examples": "tsc -p examples/tsconfig.json",
+    "examples": "yarn run build && node examples/run-all.ts",
+    "prepublishOnly": "yarn run typecheck && yarn run build"
   },
   "devDependencies": {
-    "@types/node": "^15.12.1",
-    "tsup": "^6.2.2",
-    "typescript": "^4.7.4"
+    "@types/node": "^24.0.0",
+    "esbuild": "^0.28.1",
+    "oxfmt": "^0.55.0",
+    "tsdown": "^0.22.2",
+    "typescript": "^6.0.3"
+  },
+  "peerDependencies": {
+    "esbuild": ">=0.15.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependenciesMeta": {
+    "esbuild": {
+      "built": true
+    }
   }
 }
