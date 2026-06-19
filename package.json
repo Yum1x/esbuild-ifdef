@@ -1,6 +1,6 @@
 {
   "name": "@yum1x/esbuild-ifdef",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Modernized fork of esbuild-ifdef: an esbuild plugin for compile-time conditional compilation using /// #if directives",
   "keywords": [
     "compile-time",
